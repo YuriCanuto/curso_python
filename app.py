@@ -50,7 +50,7 @@ def deletar_tarefa(id):
     for tarefa in tarefas:
         if str(tarefa.id) == id:
             tarefas.remove(tarefa)
-            return jsonify({"mensagem": "Tarefa removida"})
+            return jsonify({"mensagem": "Tarefa removida"}), 204
     
     return jsonify({"mensagem": "Tarefa não encontada"}), 404
         
